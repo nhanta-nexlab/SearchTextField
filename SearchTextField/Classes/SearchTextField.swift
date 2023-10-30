@@ -649,14 +649,22 @@ open class SearchTextFieldItem {
     fileprivate var attributedSubtitle: NSMutableAttributedString?
     
     // Public interface
+    public var id: String?
     public var title: String
     public var subtitle: String?
     public var image: UIImage?
     
-    public init(title: String, subtitle: String?, image: UIImage?) {
+    public init(id: String?, title: String, subtitle: String?, image: UIImage?) {
+        self.id = id
         self.title = title
         self.subtitle = subtitle
         self.image = image
+    }
+
+     public init(id: String?, title: String, subtitle: String?) {
+        self.id = id
+        self.title = title
+        self.subtitle = subtitle
     }
     
     public init(title: String, subtitle: String?) {
